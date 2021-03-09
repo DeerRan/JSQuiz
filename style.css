@@ -39,9 +39,6 @@ body {
 }
 
 #content {
-    border-style:solid;
-    border-color:#A7DB42;
-    border-width: 6px;
     margin: auto;
     width: 60%;
     height: 600px;
@@ -57,9 +54,6 @@ body {
 
 h1 {
     color: rgb(71, 90, 58);
-    border-style:solid;
-    border-color:#A7DB42;
-    border-width: 6px;
     margin:auto;
     margin:20px;
     padding: 0;
@@ -94,9 +88,6 @@ h1 {
 }
 
 #result {
-    border-style:solid;
-    border-color:#A7DB42;
-    border-width: 6px;
     margin:20px;
     margin-top: 100px;
     padding: 0;
@@ -113,22 +104,25 @@ h1 {
     flex-wrap: wrap;
 }
 #form {
-    background-color: white;
-    color: rgb(71, 90, 58);
-    border-style:solid;
-    border-color:#A7DB42;
-    border-width: 6px;
     margin:auto;
     margin:20px;
     padding: 0;
     display:flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
 
 #Name{
-    border: none;
+    border:solid;
+    border-color: #A7DB42;
+    border-width: 3px;
+    color: rgb(71, 90, 58);
+    background-color: #D0F0C0;
     width: fit-content;
+    height: 30px;
+    margin:0;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -187,4 +181,5 @@ h1 {
 
 #listdiv ul {
     margin: 20px;
+    margin-left:0px;
 }
