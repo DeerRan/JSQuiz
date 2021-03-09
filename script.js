@@ -88,12 +88,10 @@ var points = 0
 var addpoints = function () {
     if (outcome === true) {
         points += 5;
-        console.log(points)
     }
 
     if (question.id === 'DONE') {
         playerscore = points + (seconds / 60) * 25
-        console.log('final ' + playerscore.toFixed(0))
     }
 }
 
@@ -310,6 +308,16 @@ function changecontent() {
     }
 }
 
+//Add to scoreboard function
+var updatescoreboard = function () {
+    let recordname = localStorage.getItem("name")
+    let recordscore = localStorage.getItem("score")
+    var record = document.createElement('li');
+
+    record.textContent = 'Name: ' + recordname + ' | Score: ' + recordscore
+    document.getElementById('ul').appendChild(record)
+}
+
 //Submit button!
 submitbtn.addEventListener('click', function (event) {
     event.preventDefault();
@@ -324,7 +332,10 @@ submitbtn.addEventListener('click', function (event) {
     else {
         //Alerts and resets
         alert('Scoreboard Updated!');
-        localStorage.setItem("score", playername);
+
+        //Storing score and name to local storage to retrieve in scoreboare
+        localStorage.setItem("name", playername);
+        localStorage.setItem("score", playerscore.toFixed(0));
         question.id = 'Q0'
         changecontent()
         hide()
@@ -333,6 +344,7 @@ submitbtn.addEventListener('click', function (event) {
         playerscore = 0
         nameInput.value = ''
         //Function to add to scoreboard.
+        updatescoreboard()
     }
 })
 
@@ -354,3 +366,5 @@ backbtn.addEventListener('click', function () {
     points = 0
     playerscore = 0
 })
+
+updatescoreboard()
