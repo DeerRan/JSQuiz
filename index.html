@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id='container'>
+        <!-- Header with Button and Time-->
+        <div id='header'>
+            <div id='score'>
+                <button id='score-btn'>View highscore?</button>
+            </div>
+            <div id='clock'>
+                <p id='time'></p>
+            </div>
+        </div>
+
+        <!-- Main Content, IE where Quiz content will go-->
+        <div id='content'>
+            <div id='quiz'>
+                <h1 id='Q1'>
+                    This is a simple template for a quiz and has no actual content. It only has place holders so feel
+                    free to explore.
+                </h1>
+                <div id='answers-0' class='answers'>
+                    <button type='button' id="start-btn" class='buttons'>
+                        Begin Quiz
+                    </button>
+                    <button type='button' id="btn-1" class='buttons'>
+                        Answer 1
+                    </button>
+
+                    <button type='button' id="btn-2" class='buttons'>
+                        Answer 2
+                    </button>
+
+                    <button type='button' id="btn-3" class='buttons'>
+                        Answer 3
+                    </button>
+
+                    <button type='button' id="btn-4" class='buttons'>
+                        Answer 4
+                    </button>
+                </div>
+                <div id='formdiv'>
+                    <form id='form'>
+                        <input type="text" id="Name" placeholder="Name" />
+                        <button type='submit' id='submit'>Submit</button>
+                    </form>
+                    <button type='button' id='no'>No Thanks!</button>
+                </div>
+            </div>
+            <div id='scoreboard'>
+                <button id="back" type='button'>Go back?</button>
+                <div id='listdiv'>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer For Revealing Outcome of Choice-->
+            <div id='result'>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
